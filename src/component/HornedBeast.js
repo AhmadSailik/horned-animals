@@ -1,6 +1,6 @@
 import React from 'react';
 import SelectedBeast from './SelectedBeast'
-import {Card,Button} from 'react-bootstrap/'
+import {Card} from 'react-bootstrap/'
 
 class HornedBeast extends React.Component{
 
@@ -40,7 +40,7 @@ this.setState({
                 <p>numberOfClick:{this.state.numberOfClick}</p> */}
 
                 <Card style={{ width: '18rem' }} >
-                    <Card.Img variant="top" src={this.state.image} onClick={this.numberOfClickFuc} />
+                    <Card.Img variant="top" src={this.state.image} onClick={this.numberOfClickFuc}alt={this.state.title} />
                     <Card.Body onClick={this.openModal}>
                         <Card.Title>{this.state.title}</Card.Title>
                         <Card.Text>
