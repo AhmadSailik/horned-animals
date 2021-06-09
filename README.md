@@ -1,5 +1,22 @@
-## Desgin by Ahmad Sailik
+## Design by Ahmad Sailik
 **horned-animals**
+
+## lab 301-03
+## Number and name of feature: 
+- Display a Modal for When the user clicks on an individual image
+Then the image should render larger on the screen with the description displayed
+
+## Estimate of time needed to complete:  3 Hour
+
+## Start time: 8/6/2021
+
+## Finish time: 9/6/2021
+
+## Actual time needed to complete: 1 day
+
+
+
+## lab 301-02
 ## Number and name of feature: 
 - Display images
 - Allow users to vote for their favorite beast
