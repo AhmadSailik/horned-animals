@@ -1,5 +1,5 @@
 import React from 'react';
-import SelectedBeast from './SelectedBeast'
+
 import {Card} from 'react-bootstrap/'
 
 class HornedBeast extends React.Component{
@@ -8,10 +8,6 @@ constructor(pops){
     super(pops);
     this.state={
         numberOfClick:0,
-        show:false,
-        title:this.props.hornTitle,
-        image:this.props.hornImage,
-        description:this.props.hornDescription,
     }
 }
 numberOfClickFuc=()=>{
@@ -20,43 +16,29 @@ numberOfClickFuc=()=>{
     })
 
 }
-openModal=()=>{
-    this.setState({
-        show:true
-    })
+returnTitle=()=>{
+    this.props.openitpass(this.props.hornTitle)
 }
-closeModal=()=>{
-this.setState({
-    show:false
-})
-}
+
 
     render(){
         return(
             <div>
-                {/* <h2>{this.props.hornTitle}</h2>
-                <p>{this.props.hornDescription}</p>
-                <img src={this.props.hornImage} onClick={this.numberOfClickFuc} />
-                <p>numberOfClick:{this.state.numberOfClick}</p> */}
-
                 <Card style={{ width: '18rem' }} >
-                    <Card.Img variant="top" src={this.state.image} onClick={this.numberOfClickFuc}alt={this.state.title} />
-                    <Card.Body onClick={this.openModal}>
-                        <Card.Title>{this.state.title}</Card.Title>
+                    <Card.Img variant="top" src={this.props.hornImage} onClick={this.numberOfClickFuc}alt={this.props.hornTitle} />
+                    <Card.Body onClick={this.returnTitle}>
+                        <Card.Title>{this.props.hornTitle}</Card.Title>
                         <Card.Text>
-                        {this.state.description}
+                        {this.props.hornDescription}
                         </Card.Text>
-                        <Card.Text>❤️:{this.state.numberOfClick}</Card.Text>
+                        <Card.Text >
+                            🐥 : {this.props.numberOfHoner} vots 
+                        </Card.Text>
+                        <Card.Text> 
+                            ❤️ : {this.state.numberOfClick}
+                            </Card.Text>
                     </Card.Body>
                 </Card>
-                <SelectedBeast
-                openit={this.state.show}
-                closit={this.closeModal}
-                titleModal={this.state.title}
-                imageModal={this.state.image}
-                descriptionModal={this.state.description}
-                
-                />
             </div>
         )
     }
