@@ -16,29 +16,39 @@ class App extends React.Component {
       show:false,
       selectBeast: {},
       
+      
     }
   };
   openModal=(honerTitle)=>{
-
     this.setState({
         show:true,
         selectBeast:rawData.find(val=>val.title===honerTitle),
+        
     })
 };
 closeModal=()=>{
 this.setState({
-    show:false
+    show:false,
+})
+};
+filterShow=(gallry)=>{
+this.setState({
+  gallry:gallry,
 })
 };
 
 
+
   render() {
     return (
+   
       <div>
+   
         <Header />
         <Main
           data={this.state.gallry}
           openit={this.openModal}
+          filterData={this.filterShow}
         />
         <Footer />
         <SelectedBeast
