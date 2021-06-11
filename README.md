@@ -1,16 +1,5 @@
 ## Design by Ahmad Sailik
 **horned-animals**
-## lab 301-04
-## Number and name of feature: 
-- use form and filter it
-
-## Estimate of time needed to complete:  3 Hour
-
-## Start time: 4
-
-## Finish time: 7
-
-## Actual time needed to complete: 3 Hour
 
 ## lab 301-03
 ## Number and name of feature: 
