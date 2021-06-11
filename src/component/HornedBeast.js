@@ -24,9 +24,9 @@ returnTitle=()=>{
     render(){
         return(
             <div>
-                <Card style={{ width: '18rem' }} >
+                <Card style={{ width: '18rem' }}onClick={this.returnTitle} >
                     <Card.Img variant="top" src={this.props.hornImage} onClick={this.numberOfClickFuc}alt={this.props.hornTitle} />
-                    <Card.Body onClick={this.returnTitle}>
+                    <Card.Body >
                         <Card.Title>{this.props.hornTitle}</Card.Title>
                         <Card.Text>
                         {this.props.hornDescription}
